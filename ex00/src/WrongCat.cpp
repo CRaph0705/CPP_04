@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 10:46:39 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/29 13:40:23 by rcochran         ###   ########.fr       */
+/*   Created: 2025/10/29 14:15:44 by rcochran          #+#    #+#             */
+/*   Updated: 2025/10/29 14:19:15 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 
-Dog::Dog()
+WrongCat::WrongCat()
 {
-	std::cout << "Dog default constructor called" << std::endl;
-	this->setType("Dog");
+	std::cout << "WrongCat default constructor called" << std::endl;
+	this->setType("WrongCat");
 }
 
-Dog::Dog(Dog &cpy)
+WrongCat::WrongCat(WrongCat &cpy)
 {
-	std::cout << "Dog copy constructor called" << std::endl;
+	std::cout << "WrongCat copy constructor called" << std::endl;
 	this->setType(cpy.getType());
 }
 
-Dog	&Dog::operator=(Dog &cpy)
+WrongCat	&WrongCat::operator=(WrongCat &cpy)
 {
-	std::cout << "Dog assignation constructor called" << std::endl;
+	std::cout << "WrongCat assignation constructor called" << std::endl;
 	this->setType(cpy.getType());
 	return (*this);
 }
 
-Dog::~Dog()
+WrongCat::~WrongCat()
 {
-	std::cout << "Dog destructor called" << std::endl;
+	std::cout << "WrongCat destructor called" << std::endl;
 	return ;
 }

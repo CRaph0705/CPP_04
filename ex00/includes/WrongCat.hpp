@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.hpp                                           :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 10:59:39 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/29 13:59:20 by rcochran         ###   ########.fr       */
+/*   Created: 2025/10/29 13:57:23 by rcochran          #+#    #+#             */
+/*   Updated: 2025/10/29 14:15:15 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-
-#include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
-
 #include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+
+class WrongCat : public WrongAnimal
+{
+	//
+public:
+	// default
+	WrongCat( void );
+	// overloaded
+	WrongCat(WrongCat &cpy);
+	// copy
+	WrongCat	&operator=(WrongCat &cpy);
+	// destructor
+	~WrongCat(void);
+} ;
