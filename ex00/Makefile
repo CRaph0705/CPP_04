@@ -6,7 +6,7 @@
 #    By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/29 10:10:52 by rcochran          #+#    #+#              #
-#    Updated: 2025/10/29 11:02:16 by rcochran         ###   ########.fr        #
+#    Updated: 2025/10/29 14:19:45 by rcochran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,9 @@ INCLUDES	=	-I ./includes
 FILES		= 	\
 				$(SRC)Animal.cpp \
 				$(SRC)Cat.cpp \
-				$(SRC)Dog.cpp
+				$(SRC)Dog.cpp \
+				$(SRC)WrongAnimal.cpp \
+				$(SRC)WrongCat.cpp
 				
 
 MAIN		= 	$(SRC)main.cpp
