@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 10:21:23 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/29 11:52:23 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/10/29 14:55:39 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ public:
 	//assignation
 	Animal	&operator=(Animal &cpy);
 	//destructor
-	~Animal(void);
+	virtual ~Animal(void);
 
-	void	makeSound() const;
+	virtual	void	makeSound() const;
 	std::string getType() const ;
 	void	setType(std::string input);
 } ;

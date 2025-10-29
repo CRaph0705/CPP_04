@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 10:46:37 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/29 13:40:52 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/10/29 14:54:27 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,9 @@ Cat::~Cat()
 {
 	std::cout << "Cat destructor called" << std::endl;
 	return ;
+}
+
+void	Cat::makeSound() const
+{
+	std::cout << "Meow" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 14:15:44 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/29 14:19:15 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/10/29 14:57:27 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,11 @@ WrongCat	&WrongCat::operator=(WrongCat &cpy)
 WrongCat::~WrongCat()
 {
 	std::cout << "WrongCat destructor called" << std::endl;
+	return ;
+}
+
+void	WrongCat::makeSound() const
+{
+	std::cout << "MIIIIAAAAAAOUUUUU" << std::endl;
 	return ;
 }

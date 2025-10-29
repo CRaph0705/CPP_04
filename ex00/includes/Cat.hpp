@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 10:54:52 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/29 11:48:45 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/10/29 14:52:25 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,6 @@ public:
 	Cat	&operator=(Cat &cpy);
 	// destructor
 	~Cat(void);
+
+	void	makeSound() const;
 } ;

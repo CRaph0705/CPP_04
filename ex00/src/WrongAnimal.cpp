@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 14:16:28 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/29 14:19:17 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/10/29 14:56:56 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,7 @@ WrongAnimal::~WrongAnimal()
 
 void	WrongAnimal::makeSound() const
 {
-	std::string opt = this->getType();
-	
-	if (this->getType() == "WrongCat")
-		std::cout << "MIIIIAAAAAAOUUUUU" << std::endl;
-	else
-		std::cout << "..." << std::endl;
+	std::cout << "Mrrllmlrmlllmllmlrmlrrrml" << std::endl;
 	return ;
 }
 

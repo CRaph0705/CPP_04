@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 10:47:11 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/29 13:56:14 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/10/29 14:53:54 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,7 @@ Animal::~Animal()
 }
 
 void	Animal::makeSound() const
-{
-	std::string opt = this->getType();
-	
-	if (this->getType() == "Dog")
-		std::cout << "Woof" << std::endl;
-	else if (this->getType() == "Cat")
-		std::cout << "Meow" << std::endl;
-	else
+{	
 		std::cout << "..." << std::endl;
 	return ;
 }
