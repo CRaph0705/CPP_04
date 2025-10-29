@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 10:46:39 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/29 13:40:23 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/10/29 14:53:39 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,9 @@ Dog::~Dog()
 {
 	std::cout << "Dog destructor called" << std::endl;
 	return ;
+}
+
+void	Dog::makeSound() const
+{
+	std::cout << "Woof" << std::endl;
 }
