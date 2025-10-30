@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 10:46:37 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/29 15:29:56 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/10/30 13:21:11 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ Cat	&Cat::operator=(Cat &cpy)
 {
 	std::cout << "Cat assignation constructor called" << std::endl;
 	this->setType(cpy.getType());
+	delete (this->_brain);
+	this->_brain = new Brain (*(cpy.getBrain()));
 	return (*this);
 }
 
@@ -37,4 +39,25 @@ Cat::~Cat()
 	std::cout << "Cat destructor called" << std::endl;
 	delete (this->_brain);
 	return ;
+}
+
+void	Cat::setBrain(Brain *brain)
+{
+	this->_brain = brain;
+}
+
+Brain	*Cat::getBrain(void)
+{
+	return (this->_brain);
+}
+
+void Cat::setIdea(int i, const std::string input)
+{
+	if (i < 100 && i >= 0)
+		this->_brain->setIdea(i, input);
+}
+
+std::string Cat::getIdea(int i)
+{
+	return (this->getBrain()->getIdea(i));
 }

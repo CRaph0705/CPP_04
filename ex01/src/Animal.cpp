@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 10:47:11 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/29 13:56:14 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/10/30 13:21:52 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,16 @@ void	Animal::setType(std::string input)
 {
 	this->type = input;
 	return ;	
+}
+void Animal::setIdea(int i, const std::string input)
+{
+	(void)i;
+	(void)input;
+	return ;
+}
+
+std::string	Animal::getIdea(int i)
+{
+	(void)i;
+	return ("");
 }
