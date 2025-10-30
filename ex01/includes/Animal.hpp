@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 10:21:23 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/29 15:43:46 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/10/30 13:17:22 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ public:
 	virtual ~Animal(void);
 
 	void	makeSound() const;
-	std::string getType() const ;
+	std::string getType() const;
 	void	setType(std::string input);
-} ;
+
+	virtual void setIdea(int i, const std::string input);
+	virtual std::string getIdea(int i);
+} ;	
