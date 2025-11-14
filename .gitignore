@@ -1,7 +1,9 @@
 ex00/Polymoprh
+ex00/obj
 ex01/Brain
-ex03/Materia
+ex01/obj
 ex02/Brain
-*.o
-*.d
+ex02/obj
+ex03/Materia
+ex03/obj
 .vscode/settings.json
