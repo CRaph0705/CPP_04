@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 10:46:37 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/30 13:21:11 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/14 18:46:25 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,10 @@ void Cat::setIdea(int i, const std::string input)
 std::string Cat::getIdea(int i)
 {
 	return (this->getBrain()->getIdea(i));
+}
+
+void	Cat::makeSound() const
+{
+	std::cout << "Meow" << std::endl;
+	return ;
 }

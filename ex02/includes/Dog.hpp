@@ -6,15 +6,15 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 10:55:24 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/30 13:17:31 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/14 18:42:47 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class	Dog : public Animal
+class	Dog : public AAnimal
 {
 private:
 	Brain	*_brain;
@@ -33,4 +33,6 @@ public:
 
 	void setIdea(int i, const std::string input);
 	std::string getIdea(int i);
+
+	void	makeSound() const;
 } ;

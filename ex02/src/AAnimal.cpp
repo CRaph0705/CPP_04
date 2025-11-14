@@ -1,51 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 10:47:11 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/31 12:25:10 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/14 18:40:43 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-Animal::Animal()
+AAnimal::AAnimal()
 {
 	std::cout << "Animal default constructor called" << std::endl;
 	this->setType("");
 	return ;
 }
 
-Animal::Animal(std::string input) : type(input)
+AAnimal::AAnimal(std::string input) : type(input)
 {
 	std::cout << "Animal overloaded constructor called" << std::endl;
 	return ;
 }
 
-Animal::Animal(const Animal &cpy)
+AAnimal::AAnimal(const AAnimal &cpy)
 {
 	std::cout << "Animal copy constructor called" << std::endl;
 	this->type = cpy.type;
 	return ;
 }
 
-Animal	&Animal::operator=(Animal &cpy)
+AAnimal	&AAnimal::operator=(AAnimal &cpy)
 {
 	std::cout << "Animal assignation constructor called" << std::endl;
 	this->type = cpy.type;	
 	return (*this);
 }
 
-Animal::~Animal()
+AAnimal::~AAnimal()
 {
 	std::cout << "Animal destructor called" << std::endl;
 	return ;
 }
 
-void	Animal::makeSound() const
+void	AAnimal::makeSound() const
 {
 	std::string opt = this->getType();
 	
@@ -58,24 +58,24 @@ void	Animal::makeSound() const
 	return ;
 }
 
-std::string Animal::getType() const
+std::string AAnimal::getType() const
 {
 	return (this->type);
 }
 
-void	Animal::setType(std::string input)
+void	AAnimal::setType(std::string input)
 {
 	this->type = input;
 	return ;	
 }
-void Animal::setIdea(int i, const std::string input)
+void AAnimal::setIdea(int i, const std::string input)
 {
 	(void)i;
 	(void)input;
 	return ;
 }
 
-std::string	Animal::getIdea(int i)
+std::string	AAnimal::getIdea(int i)
 {
 	(void)i;
 	return ("");
