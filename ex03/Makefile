@@ -6,21 +6,24 @@
 #    By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/31 12:34:46 by rcochran          #+#    #+#              #
-#    Updated: 2025/10/31 13:24:22 by rcochran         ###   ########.fr        #
+#    Updated: 2025/11/14 18:54:53 by rcochran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY : all clean fclean re
 
 CC			= 	c++
-CFLAGS		=	-Wall -Werror -Wextra -Wno-unused -std=c++98
+CFLAGS		=	-Wall -Werror -Wextra -std=c++98
 NAME		=	Materia
 OBJ_DIR		=	obj/
 SRC			=	src/
-INCLUDES	=	-I ./includes
+INCLUDES	=	-I ./includes -MMD -MP
 FILES		= 	\
 				$(SRC)AMateria.cpp \
-				$(SRC)ICharacter.cpp 
+				$(SRC)ICharacter.cpp \
+				$(MAIN)
+
+OBJ			=	$(patsubst $(SRC)%.cpp, $(OBJ_DIR)%.o, $(FILES))
 
 MAIN		= 	$(SRC)main.cpp
 all : $(NAME)
@@ -33,8 +36,11 @@ fclean : clean
 
 re : fclean all
 
-$(NAME) : $(OBJ_DIR)
-	$(CC) $(CFLAGS) $(FILES) $(MAIN) $(INCLUDES) -o $(NAME)
+$(NAME) : $(OBJ_DIR) $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) $(INCLUDES) -o $(NAME)
+
+$(OBJ_DIR)%.o: $(SRC)%.cpp
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 $(OBJ_DIR) :
 	mkdir $(OBJ_DIR)
