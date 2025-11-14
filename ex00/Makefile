@@ -6,25 +6,27 @@
 #    By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/29 10:10:52 by rcochran          #+#    #+#              #
-#    Updated: 2025/10/29 14:19:45 by rcochran         ###   ########.fr        #
+#    Updated: 2025/11/14 18:58:15 by rcochran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY : all clean fclean re
 
 CC			= 	c++
-CFLAGS		=	-Wall -Werror -Wextra -Wno-unused -std=c++98
-NAME		=	Polymoprh
+CFLAGS		=	-Wall -Werror -Wextra -std=c++98
+NAME		=	Polymorph
 OBJ_DIR		=	obj/
 SRC			=	src/
-INCLUDES	=	-I ./includes
+INCLUDES	=	-I ./includes -MMD -MP
 FILES		= 	\
 				$(SRC)Animal.cpp \
 				$(SRC)Cat.cpp \
 				$(SRC)Dog.cpp \
 				$(SRC)WrongAnimal.cpp \
-				$(SRC)WrongCat.cpp
-				
+				$(SRC)WrongCat.cpp \
+				$(MAIN)
+
+OBJ			=	$(patsubst $(SRC)%.cpp, $(OBJ_DIR)%.o, $(FILES))
 
 MAIN		= 	$(SRC)main.cpp
 all : $(NAME)
@@ -37,8 +39,12 @@ fclean : clean
 
 re : fclean all
 
-$(NAME) : $(OBJ_DIR)
-	$(CC) $(CFLAGS) $(FILES) $(MAIN) $(INCLUDES) -o $(NAME)
+$(NAME) : $(OBJ_DIR) $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) $(INCLUDES) -o $(NAME)
+
+$(OBJ_DIR)%.o: $(SRC)%.cpp
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
 
 $(OBJ_DIR) :
 	mkdir $(OBJ_DIR)
