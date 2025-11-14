@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 10:10:55 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/31 12:29:23 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/14 18:47:02 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int main()
 {
-	Animal whatever;
+	// AAnimal whatever;
+	Dog doggo;
+	
 	return (0);
 }

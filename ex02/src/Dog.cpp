@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 10:46:39 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/30 13:56:56 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/14 18:46:30 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,10 @@ void Dog::setIdea(int i, const std::string input)
 std::string Dog::getIdea(int i)
 {
 	return (this->getBrain()->getIdea(i));
+}
+
+void	Dog::makeSound() const
+{
+	std::cout << "Woof" << std::endl;
+	return ;
 }

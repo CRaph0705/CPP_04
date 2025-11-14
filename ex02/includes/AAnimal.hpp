@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 10:21:23 by rcochran          #+#    #+#             */
-/*   Updated: 2025/10/31 12:26:10 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/14 18:40:24 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
 
-class Animal {
+class AAnimal {
 
 protected:
 	std::string	type;
 public:
 	// default
-	Animal( void );
+	AAnimal( void );
 	//overloaded
-	Animal(std::string type);
+	AAnimal(std::string type);
 	//copy
-	Animal(const Animal &cpy);
+	AAnimal(const AAnimal &cpy);
 	//assignation
-	Animal	&operator=(Animal &cpy);
+	AAnimal	&operator=(AAnimal &cpy);
 	//destructor
-	virtual ~Animal(void);
+	~AAnimal(void);
 
 	virtual void	makeSound() const = 0;
 	std::string getType() const;
