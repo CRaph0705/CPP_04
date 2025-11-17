@@ -1,17 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.hpp                                           :+:      :+:    :+:   */
+/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/31 12:39:30 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/14 19:15:41 by rcochran         ###   ########.fr       */
+/*   Created: 2025/11/14 19:15:13 by rcochran          #+#    #+#             */
+/*   Updated: 2025/11/14 19:15:57 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-
 #include "AMateria.hpp"
-#include "ICharacter.hpp"
-#include "IMateriaSource.hpp"
+#pragma once
+
+class IMateriaSource
+{
+public:
+virtual ~IMateriaSource() {}
+virtual void learnMateria(AMateria*) = 0;
+virtual AMateria* createMateria(std::string const & type) = 0;
+};
