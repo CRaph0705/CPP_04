@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 12:39:30 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 17:29:57 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/18 18:26:51 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,4 @@
 #include "Ice.hpp"
 #include "ICharacter.hpp"
 #include "IMateriaSource.hpp"
+#include "MateriaSource.hpp"
