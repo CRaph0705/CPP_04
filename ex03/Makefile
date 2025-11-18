@@ -6,7 +6,7 @@
 #    By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/31 12:34:46 by rcochran          #+#    #+#              #
-#    Updated: 2025/11/14 18:54:53 by rcochran         ###   ########.fr        #
+#    Updated: 2025/11/18 17:37:29 by rcochran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,9 @@ SRC			=	src/
 INCLUDES	=	-I ./includes -MMD -MP
 FILES		= 	\
 				$(SRC)AMateria.cpp \
+				$(SRC)Character.cpp \
+				$(SRC)Cure.cpp \
+				$(SRC)Ice.cpp \
 				$(SRC)ICharacter.cpp \
 				$(MAIN)
 

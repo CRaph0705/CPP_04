@@ -1,42 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.cpp                                     :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/18 13:05:54 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 17:28:26 by rcochran         ###   ########.fr       */
+/*   Created: 2025/11/17 12:18:42 by rcochran          #+#    #+#             */
+/*   Updated: 2025/11/18 17:39:15 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ICharacter.hpp"
+#include <iostream>
+#pragma once
+#include "AMateria.hpp"
 
-ICharacter::ICharacter(std::string name)
+class Ice : public AMateria
 {
-	(void) name;
-	return ;
-}
+private:
+public:
+	Ice(void);
+	Ice(Ice &cpy);
+	Ice	&operator=(Ice &cpy);
+	~Ice(void);
 
-
-void ICharacter::equip(AMateria* m)
-{
-	(void) m;
-	return ;
-}
-
-void ICharacter::unequip(int idx)
-{
-	if (idx > 3 || idx < 0)
-		return ;
-	return ;
-}
-
-void ICharacter::use(int idx, ICharacter& target)
-{
-	if (idx > 3 || idx < 0)
-		return ;
-
-	(void) target;
-	return ;
-}
+	void use(ICharacter& target);
+} ;

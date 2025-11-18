@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.cpp                                     :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/18 13:05:54 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 17:28:26 by rcochran         ###   ########.fr       */
+/*   Created: 2025/11/17 12:19:05 by rcochran          #+#    #+#             */
+/*   Updated: 2025/11/18 17:37:55 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ICharacter.hpp"
+#include <iostream>
+#pragma once
+#include "AMateria.hpp"
 
-ICharacter::ICharacter(std::string name)
+class Cure : public AMateria
 {
-	(void) name;
-	return ;
-}
+private:
+public:
+	Cure(void);
+	Cure(Cure &cpy);
+	Cure	&operator=(Cure &cpy);
+	~Cure(void);
 
+	void use(ICharacter& target);
 
-void ICharacter::equip(AMateria* m)
-{
-	(void) m;
-	return ;
-}
-
-void ICharacter::unequip(int idx)
-{
-	if (idx > 3 || idx < 0)
-		return ;
-	return ;
-}
-
-void ICharacter::use(int idx, ICharacter& target)
-{
-	if (idx > 3 || idx < 0)
-		return ;
-
-	(void) target;
-	return ;
-}
+} ;
