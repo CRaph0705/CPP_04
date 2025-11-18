@@ -6,7 +6,7 @@
 #    By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/31 12:34:46 by rcochran          #+#    #+#              #
-#    Updated: 2025/11/18 17:37:29 by rcochran         ###   ########.fr        #
+#    Updated: 2025/11/18 18:26:21 by rcochran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,8 @@ FILES		= 	\
 				$(SRC)Cure.cpp \
 				$(SRC)Ice.cpp \
 				$(SRC)ICharacter.cpp \
+				$(SRC)IMateriaSource.cpp \
+				$(SRC)MateriaSource.cpp \
 				$(MAIN)
 
 OBJ			=	$(patsubst $(SRC)%.cpp, $(OBJ_DIR)%.o, $(FILES))
