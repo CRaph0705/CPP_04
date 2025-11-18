@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 12:19:18 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 17:40:53 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/18 19:41:52 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,9 @@ void Cure::use(ICharacter& target)
 {
 	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 	return ;
+}
+
+Cure* Cure::clone()const
+{
+	return (NULL);
 }

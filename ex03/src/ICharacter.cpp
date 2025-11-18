@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 13:05:54 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 17:28:26 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/18 19:03:41 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,17 @@ ICharacter::ICharacter(std::string name)
 	return ;
 }
 
+ICharacter::ICharacter(ICharacter &cpy)
+{
+	(void)cpy;
+	return ;
+}
+
+ICharacter	&ICharacter::operator=(ICharacter &cpy)
+{
+	(void)cpy;
+	return (*this);
+}
 
 void ICharacter::equip(AMateria* m)
 {

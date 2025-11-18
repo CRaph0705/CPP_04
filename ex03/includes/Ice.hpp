@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 12:18:42 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 17:39:15 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/18 19:40:19 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ public:
 	~Ice(void);
 
 	void use(ICharacter& target);
+	Ice* clone() const;
 } ;

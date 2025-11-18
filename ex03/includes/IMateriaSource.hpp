@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 19:15:13 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 18:21:38 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/18 18:37:10 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 class IMateriaSource
 {
-private:
+protected:
 
 public:
 virtual ~IMateriaSource() {}

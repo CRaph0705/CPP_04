@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 12:18:38 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 17:40:36 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/18 19:41:47 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,8 @@ void Ice::use(ICharacter& target)
 {
 	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 	return ;
+}
+Ice* Ice::clone()const
+{
+	return (NULL);
 }

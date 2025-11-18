@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 12:40:12 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 17:34:04 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/18 19:02:24 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ protected:
 public:
 ICharacter(void) {}
 ICharacter(std::string name);
+ICharacter(ICharacter &cpy);
+ICharacter	&operator=(ICharacter &cpy);
 virtual ~ICharacter() {}
 virtual std::string const & getName() const = 0;
 virtual void equip(AMateria* m) = 0;

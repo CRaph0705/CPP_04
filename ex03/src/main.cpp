@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 12:40:46 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 17:34:47 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/18 19:42:24 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-	// IMateriaSource* src = new MateriaSource();
+	IMateriaSource* src = new MateriaSource();
 	// src->learnMateria(new Ice());
 	// src->learnMateria(new Cure());
 	ICharacter* me = new Character("me");
@@ -28,6 +28,6 @@ int main()
 	// me->use(1, *bob);
 	delete bob;
 	delete me;
-	// delete src;
+	delete src;
 	return 0;
 }
