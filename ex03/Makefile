@@ -6,7 +6,7 @@
 #    By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/31 12:34:46 by rcochran          #+#    #+#              #
-#    Updated: 2025/11/18 18:26:21 by rcochran         ###   ########.fr        #
+#    Updated: 2025/11/19 12:47:12 by rcochran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,8 +23,6 @@ FILES		= 	\
 				$(SRC)Character.cpp \
 				$(SRC)Cure.cpp \
 				$(SRC)Ice.cpp \
-				$(SRC)ICharacter.cpp \
-				$(SRC)IMateriaSource.cpp \
 				$(SRC)MateriaSource.cpp \
 				$(MAIN)
 
