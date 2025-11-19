@@ -6,14 +6,13 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 12:43:13 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/19 10:25:25 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/19 12:44:15 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
 
-//TODO While assigning a Materia to another, copying the type doesn’t make sense.
 AMateria::AMateria( void )
 {
 	std::cout << "AMateria Default constructor function called." << std::endl;

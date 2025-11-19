@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 12:19:18 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/19 10:26:42 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/19 12:44:22 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ Cure::Cure(void)
 	return ;
 }
 
-	// std::cout << "Cure Overloaded constructor function called." << std::endl;
-
 Cure::Cure(const Cure &cpy)
 {
 	std::cout << "Cure Copy constructor function called." << std::endl;
@@ -29,6 +27,7 @@ Cure::Cure(const Cure &cpy)
 	return ;
 }
 
+//TODO While assigning a Materia to another, copying the type doesn’t make sense.
 Cure	&Cure::operator=(Cure &cpy)
 {
 	std::cout << "Cure Overloaded operator= function called." << std::endl;

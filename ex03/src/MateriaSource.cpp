@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 18:25:19 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/19 10:04:53 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/19 12:45:40 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,6 @@ MateriaSource::MateriaSource()
 	std::cout << "MateriaSource Default constructor function called." << std::endl;
 	return ;
 }
-
-// MateriaSource::MateriaSource(std::string name)
-// {
-// 	std::cout << "MateriaSource Overloaded constructor function called." << std::endl;
-// 	return ;
-// }
 
 MateriaSource::MateriaSource(MateriaSource &cpy)
 {
@@ -37,7 +31,7 @@ MateriaSource::~MateriaSource()
 	std::cout << "MateriaSource Destructor function called." << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
-		if (this->_materia_array[i])
+		if (this->_materia_array[i] != NULL)
 			delete (this->_materia_array[i]);
 	}
 	return ;

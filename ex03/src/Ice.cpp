@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 12:18:38 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/19 10:26:33 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/19 12:45:20 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,6 @@ Ice::Ice(void)
 	return ;
 }
 
-/* Ice::Ice(void)
-{
-	std::cout << "Ice Overloaded constructor function called." << std::endl;
-	return ;
-} */
-
 Ice::Ice(const Ice &cpy)
 {
 	std::cout << "Ice Copy constructor function called." << std::endl;
@@ -32,6 +26,7 @@ Ice::Ice(const Ice &cpy)
 	return ;
 }
 
+//TODO While assigning a Materia to another, copying the type doesn’t make sense.
 Ice	&Ice::operator=(Ice &cpy)
 {
 	std::cout << "Ice Overloaded operator= function called." << std::endl;
