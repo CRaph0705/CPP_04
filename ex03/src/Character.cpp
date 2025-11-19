@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 12:40:36 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 17:20:42 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/19 10:27:06 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,18 @@ Character::~Character( void )
 }
 void Character::equip(AMateria* m)
 {
-	int idx;
-	
-	idx = 0;
-	while(this->inventory[idx] != NULL)
-		idx++;
-	if (idx > 3 || idx < 0)
-		return ;
-	this->inventory[idx] = m;
+	if (!m)
+	{
+		std::cout << "This materia doesn't match any known types." << std::endl;
+	}
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->inventory[i] == NULL)
+		{
+			m->setOwner(this);
+			this->inventory[i] = m;
+		}
+	}
 	return ;
 }
 

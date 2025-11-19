@@ -6,10 +6,11 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 18:25:14 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 19:34:11 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/19 10:31:18 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include <iostream>
 #include "AMateria.hpp"
 #include "IMateriaSource.hpp"
@@ -21,8 +22,8 @@ class AMateria;
 class	MateriaSource : public IMateriaSource
 {
 private:
-	/* data */
 public:
+	AMateria *_materia_array[4];
 	MateriaSource(void);
 	// MateriaSource(std::string name);
 	MateriaSource(MateriaSource &cpy);

@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 18:25:19 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 19:38:38 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/19 10:04:53 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,42 @@ MateriaSource::MateriaSource(MateriaSource &cpy)
 MateriaSource::~MateriaSource()
 {
 	std::cout << "MateriaSource Destructor function called." << std::endl;
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_materia_array[i])
+			delete (this->_materia_array[i]);
+	}
 	return ;
 }
 
-void MateriaSource::learnMateria(AMateria*)
+void MateriaSource::learnMateria(AMateria *materia)
 {
-	//
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_materia_array[i] == NULL)
+		{
+			this->_materia_array[i] = materia;
+			std::cout << "This source has learned " << materia->getType() << "."<< std::endl;
+			return ;
+		}
+	}
+	std::cout << "This source has already its 4 slots full." << std::endl;
+	std::cout << "Couldn't learn " << materia->getType() << "." << std::endl;
+	delete (materia);
 	return ;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)
 {
-	AMateria	*new_materia;
-	if (type=="ice")
-		new_materia = new Ice();
-	else
-		new_materia = new Cure();
-	return (new_materia);
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_materia_array[i] && this->_materia_array[i]->getType() == type)
+		{
+			std::cout << "This source has created a " << type << "." << std::endl;
+			return (this->_materia_array[i]->clone());
+		}
+	}
+	std::cout << "No Materia of type " << type << " learned by this source." << std::endl;
+	std::cout << "Creation aborted." << std::endl;
+	return (NULL);
 }

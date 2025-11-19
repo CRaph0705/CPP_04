@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 13:05:54 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 19:03:41 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/19 10:14:35 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ ICharacter	&ICharacter::operator=(ICharacter &cpy)
 
 void ICharacter::equip(AMateria* m)
 {
-	(void) m;
+	(void)m;
 	return ;
 }
 

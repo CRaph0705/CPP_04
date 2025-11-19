@@ -6,16 +6,14 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 12:40:12 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 19:02:24 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/19 10:57:21 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #pragma once
-#include "AMateria.hpp"
+#include <iostream>
 
 class AMateria;
-
 class ICharacter
 {
 protected:

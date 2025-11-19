@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 12:19:18 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 19:41:52 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/19 10:26:42 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@
 Cure::Cure(void)
 {
 	std::cout << "Cure Default constructor function called." << std::endl;
+	this->_type = "cure";
 	return ;
 }
 
 	// std::cout << "Cure Overloaded constructor function called." << std::endl;
 
-Cure::Cure(Cure &cpy)
+Cure::Cure(const Cure &cpy)
 {
 	std::cout << "Cure Copy constructor function called." << std::endl;
 	this->_type = cpy.getType();
@@ -31,7 +32,8 @@ Cure::Cure(Cure &cpy)
 Cure	&Cure::operator=(Cure &cpy)
 {
 	std::cout << "Cure Overloaded operator= function called." << std::endl;
-	this->_type = cpy.getType();
+	(void)cpy;
+	// this->_type = cpy.getType();
 	return (*this);
 }
 
@@ -48,7 +50,10 @@ void Cure::use(ICharacter& target)
 	return ;
 }
 
-Cure* Cure::clone()const
+AMateria* Cure::clone()const
 {
-	return (NULL);
+	AMateria	*tmp;
+
+	tmp = new Cure(*this);
+	return (tmp);
 }

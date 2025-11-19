@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 12:43:13 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 16:15:28 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/19 10:25:25 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 AMateria::AMateria( void )
 {
 	std::cout << "AMateria Default constructor function called." << std::endl;
+	this->_owner = NULL;
 	return ;
 }
 
@@ -67,4 +68,13 @@ void AMateria::use(ICharacter& target)
 {
 	(void) target;
 	return ;
+}
+
+Character* AMateria::getOwner()
+{
+	return (this->_owner);
+}
+void	AMateria::setOwner(Character *new_owner)
+{
+	this->_owner = new_owner;
 }

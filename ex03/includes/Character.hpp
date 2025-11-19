@@ -6,15 +6,16 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 12:17:31 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/18 17:34:14 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/19 10:58:20 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #pragma once
+#include <iostream>
 #include "ICharacter.hpp"
 #include "AMateria.hpp"
 
+class ICharacter;
 class Character: public ICharacter {
 	private:
 	std::string _name;
@@ -27,7 +28,6 @@ class Character: public ICharacter {
 	~Character( void );
 
 	std::string const & getName() const {return (this->_name);};
-
 	
 	void equip(AMateria* m);
 	void unequip(int idx);
