@@ -6,7 +6,7 @@
 /*   By: rcochran <rcochran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 12:40:36 by rcochran          #+#    #+#             */
-/*   Updated: 2025/11/19 12:43:46 by rcochran         ###   ########.fr       */
+/*   Updated: 2025/11/19 17:00:07 by rcochran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,16 @@ Character	&Character::operator=(Character &cpy)
 {
 	std::cout << "Character overloaded operator= function called." << std::endl;
 	this->_name = cpy.getName();
+	for(int i = 0; i < 4; i++)
+	{
+		if (cpy._inventory[i])
+		{
+			this->_inventory[i] = cpy._inventory[i]->clone();
+			this->_inventory[i]->setOwner(this);
+		}
+		else
+			this->_inventory[i] = NULL;
+	}
 	return (*this);
 }
 
